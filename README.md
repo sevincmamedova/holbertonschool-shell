@@ -13,3 +13,5 @@ This directory covers:
 - How to kill a process
 - What is a signal
 - What are the 2 signals that cannot be ignored
+
+Bash scripting layihəsi — proseslər və siqnallar.

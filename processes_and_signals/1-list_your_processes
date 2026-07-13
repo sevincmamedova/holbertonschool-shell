@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Displays the current user's running processes
+ps -ef

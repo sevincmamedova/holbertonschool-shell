@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-# Displays the current user's running processes
-ps -ef
+# Displays a list of all running processes, user-oriented, with hierarchy
+ps auxf

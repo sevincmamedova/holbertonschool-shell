@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+# Starts, stops or restarts the manage_my_process script
+PIDFILE=/var/run/my_process.pid
+
+start_process()
+{
+	./manage_my_process &
+	echo "$!" > "$PIDFILE"
+}
+
+stop_process()
+{
+	kill "$(cat "$PIDFILE")"
+	rm -f "$PIDFILE"
+}
+
+case "$1" in
+	start)
+		start_process
+		echo "manage_my_process started"
+		;;
+	stop)
+		stop_process
+		echo "manage_my_process stopped"
+		;;
+	restart)
+		stop_process
+		start_process
+		echo "manage_my_process restarted"
+		;;
+	*)
+		echo "Usage: manage_my_process {start|stop|restart}"
+		;;
+esac

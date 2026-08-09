@@ -24,3 +24,6 @@ Bash scripts covering Linux processes, PIDs and signals.
 | `6-stop_me_if_you_can` | Stops `4-to_infinity_and_beyond` with `pkill` |
 | `7-highlander` | Like task 4, but answers `I am invincible!!!` to SIGTERM |
 | `8-beheaded_process` | Kills `7-highlander` with SIGKILL |
+| `10-process_and_pid_file` | Writes its PID to `/var/run/myscript.pid` and traps SIGTERM, SIGINT and SIGQUIT |
+| `manage_my_process` | Writes `I am alive!` to `/tmp/my_process` every 2 seconds |
+| `11-manage_my_process` | Init-style script: `start`, `stop` or `restart` `manage_my_process` |
